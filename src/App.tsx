@@ -8,6 +8,7 @@ import HerniaSurgery from './pages/services/HerniaSurgery';
 import RoboticSleeveGastrectomy from './pages/services/RoboticSleeveGastrectomy';
 import AppendixSurgery from './pages/services/AppendixSurgery';
 import GallbladderSurgery from './pages/services/GallbladderSurgery';
+import OesophagusSurgery from './pages/services/OesophagusSurgery';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/services/robotic-sleeve-gastrectomy" element={<RoboticSleeveGastrectomy />} />
           <Route path="/services/appendix-surgery" element={<AppendixSurgery />} />
           <Route path="/services/gallbladder-surgery" element={<GallbladderSurgery />} />
+          <Route path="/services/oesophagus-surgery" element={<OesophagusSurgery />} />
           <Route path="/doctors" element={<DoctorsPage />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
