@@ -9,11 +9,13 @@ import RoboticSleeveGastrectomy from './pages/services/RoboticSleeveGastrectomy'
 import AppendixSurgery from './pages/services/AppendixSurgery';
 import GallbladderSurgery from './pages/services/GallbladderSurgery';
 import OesophagusSurgery from './pages/services/OesophagusSurgery';
+import StomachSurgery from './pages/services/StomachSurgery';
 
 export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
+        <Route path="/services/stomach-surgery" element={<StomachSurgery />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
