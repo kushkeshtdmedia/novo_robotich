@@ -1,13 +1,8 @@
-import { ArrowRight, CheckCircle, Shield, Zap, Activity, Eye, Cpu, TrendingDown, HeartPulse, Award, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Zap, Activity, Cpu, TrendingDown, HeartPulse, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 
-// ─── IMAGE SLOT ───────────────────────────────────────────────────────────────
-// Replace this path with your own surgical diagram image.
-// Place your image file in: src/pages/services/
-// Then update the import below, e.g.:
-//   import surgicalDiagram from './your-image-name.png';
-import surgicalDiagram from './screen.png'; // <-- REPLACE THIS WITH YOUR IMAGE
-// ─────────────────────────────────────────────────────────────────────────────
+// Surgical diagram lives in /public/screen.png — replace the filename to swap the image.
+const SURGICAL_DIAGRAM = '/screen.png';
 
 const warningSigns = [
   { label: 'Feeling Full Quickly', desc: 'Early satiety even after small meals' },
@@ -246,26 +241,13 @@ export default function StomachSurgery() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-14 items-center">
-            {/* ── IMAGE SLOT ─────────────────────────────────────────────────
-                Replace the import at the top of this file with your image.
-                The slot below renders whatever you imported as `surgicalDiagram`.
-            ──────────────────────────────────────────────────────────────── */}
-            <div className="rounded-3xl overflow-hidden shadow-2xl bg-slate-200 min-h-[400px] flex items-center justify-center">
-              {surgicalDiagram ? (
-                <img
-                  src={surgicalDiagram}
-                  alt="Surgical diagram — Partial Gastrectomy"
-                  className="w-full h-full object-contain"
-                />
-              ) : (
-                <div className="text-center p-12">
-                  <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Eye size={24} className="text-teal-600" />
-                  </div>
-                  <p className="font-bold text-gray-700 mb-1">Surgical Diagram</p>
-                  <p className="text-xs text-gray-400">Replace the import at the top of this file<br />with your image file</p>
-                </div>
-              )}
+            {/* Surgical diagram — swap /public/screen.png to change image */}
+            <div className="rounded-3xl overflow-hidden shadow-2xl bg-white">
+              <img
+                src={SURGICAL_DIAGRAM}
+                alt="Surgical diagram — Partial Gastrectomy"
+                className="w-full h-full object-contain"
+              />
             </div>
 
             <div className="space-y-8">
